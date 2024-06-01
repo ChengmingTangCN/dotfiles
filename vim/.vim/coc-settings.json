@@ -1,0 +1,27 @@
+{
+  "languageserver": {
+    "clangd": {
+      "command": "clangd",
+      "args": [
+        "--completion-style=bundled",
+        "-j=8",
+        "--clangd-tidy",
+        "--fallback-style=llvm",
+        "--header-insertion-decorators"
+      ],
+      "rootPatterns": [
+        "compile_commands.json",
+        "build/compile_commands.json",
+        "build-Release/compile_commands.json"
+      ],
+      "filetypes": [
+        "c",
+        "cc",
+        "cpp",
+        "c++",
+        "objc",
+        "objcpp"
+      ]
+    }
+  }
+}
