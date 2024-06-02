@@ -6,7 +6,7 @@ set belloff=all
 
 set background=dark
 set t_Co=256
-colorscheme elflord
+colorscheme desert
 
 " ---------------------- Search  -----------------------
 set incsearch
@@ -34,6 +34,12 @@ set undodir=~/.vim/.undo//
 set history=1000
 set list
 set listchars=trail:.
+" Highlight the trailing whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+au ColorScheme * highlight ExtraWhitespace guibg=red
+au BufEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhiteSpace /\s\+$/
 let mapleader = "\<space>"
 
 " ---------------------- Default Indentation -----------
