@@ -58,6 +58,12 @@ call plug#end()
 
 " ---------------------- fzf.vim -----------------------
 nnoremap <silent> <C-p> :Files<CR>
+nnoremap <Leader><Enter> :Buffers<CR>
+nnoremap <Leader>l :Lines<CR>
+
+" Allow passing optional flags into the Rg command.
+"   Example: :Rg myterm -g '*.md'
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " ---------------------- coc.nvim ----------------------
 " https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.vim
