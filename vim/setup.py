@@ -7,7 +7,7 @@ import subprocess
 
 def check(**kwargs):
     if os.path.exists(kwargs["dest_path"]):
-        print("{} already exists, please remote it and try again.".format(
+        print("{} already exists, please remove it and try again.".format(
             kwargs["dest_path"]))
         sys.exit(1)
 
@@ -23,8 +23,7 @@ def is_program_installed(program_name):
 if __name__ == "__main__":
     if not is_program_installed("nodejs"):
         print("nodejs is not installed, please install it and try again.")
-    else:
-        print("nodejs is installed")
+        sys.exit(1)
 
     home_dir = os.path.expanduser("~")
     map_paths = [".vim", ".vimrc"]
