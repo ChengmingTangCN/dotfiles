@@ -6,7 +6,7 @@ set belloff=all
 
 set background=dark
 set t_Co=256
-colorscheme koehler
+colorscheme habamax
 
 " ---------------------- Search  -----------------------
 set incsearch
