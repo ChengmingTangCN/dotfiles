@@ -6,7 +6,7 @@ import subprocess
 
 
 def check(**kwargs):
-    if os.path.exists(kwargs["dest_path"]):
+    if os.path.lexists(kwargs["dest_path"]):
         print("{} already exists, please remove it and try again.".format(
             kwargs["dest_path"]))
         sys.exit(1)
@@ -25,13 +25,14 @@ if __name__ == "__main__":
         print("nodejs is not installed, please install it and try again.")
         sys.exit(1)
 
+    root_dir = os.path.dirname(os.path.realpath(__file__))
     home_dir = os.path.expanduser("~")
     map_paths = [".vim", ".vimrc"]
 
     def do_map(fn):
         for map_path in map_paths:
             dest_path = os.path.abspath(os.path.join(home_dir, map_path))
-            resource_path = os.path.abspath(map_path)
+            resource_path = os.path.abspath(os.path.join(root_dir, map_path))
             fn(dest_path=dest_path, resource_path=resource_path)
 
     do_map(check)
