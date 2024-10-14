@@ -21,7 +21,7 @@ def is_program_installed(program_name):
 
 
 if __name__ == "__main__":
-    if not is_program_installed("nodejs"):
+    if not is_program_installed("npm"):
         print("nodejs is not installed, please install it and try again.")
         sys.exit(1)
 
