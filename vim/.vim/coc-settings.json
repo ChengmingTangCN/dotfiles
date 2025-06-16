@@ -1,0 +1,12 @@
+{
+  "clangd.path": "clangd",
+  "clangd.compilationDatabaseCandidates": [
+    "build"
+  ],
+  "clangd.arguments": [
+    "-j=8",
+    "--fallback-style=llvm",
+    "--header-insertion-decorators",
+    "--completion-style=bundled"
+  ]
+}
