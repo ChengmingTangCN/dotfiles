@@ -21,19 +21,17 @@ def is_program_installed(program_name):
 
 
 if __name__ == "__main__":
-    if not is_program_installed("tmux"):
-        print("tmux is not installed, please install it and try again.")
+    if not is_program_installed("alacritty"):
+        print("alacritty is not installed, please install it and try again.")
         sys.exit(1)
 
-    root_dir = os.path.dirname(os.path.realpath(__file__))
     home_dir = os.path.expanduser("~")
-    map_paths = [".tmux.conf"]
+    script_dir = os.path.dirname(os.path.realpath(__file__))
 
     def do_map(fn):
-        for map_path in map_paths:
-            dest_path = os.path.abspath(os.path.join(home_dir, map_path))
-            resource_path = os.path.abspath(os.path.join(root_dir, map_path))
-            fn(dest_path=dest_path, resource_path=resource_path)
+        dest_path = os.path.abspath(os.path.join(home_dir, ".config/alacritty"))
+        resource_path = os.path.abspath(os.path.join(script_dir, "alacritty"))
+        fn(dest_path=dest_path, resource_path=resource_path)
 
     do_map(check)
 

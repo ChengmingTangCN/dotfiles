@@ -1,0 +1,45 @@
+[window]
+dimensions = {columns = 120, lines = 85}
+padding = {x = 0, y = 0}
+decorations = "Full"
+opacity = 1.0
+startup_mode = "Windowed"
+
+[scrolling]
+history = 25000
+
+[font]
+normal = { family = "source code pro", style = "Regular"}
+size = 12
+
+[keyboard]
+bindings = [
+{ key = "N", mods = "Control", action = "CreateNewWindow" }
+]
+
+# Copy from https://github.com/alacritty/alacritty-theme/tree/master
+
+# vscode theme
+[colors.primary]
+foreground = "#cccccc"
+background = "#1e1e1e"
+
+[colors.normal]
+black = "#000000"
+red = "#cd3131"
+green = "#0dbc79"
+yellow = "#e5e510"
+blue = "#2472c8"
+magenta = "#bc3fbc"
+cyan = "#11a8cd"
+white = "#e5e5e5"
+
+[colors.bright]
+black = "#666666"
+red = "#f14c4c"
+green = "#23d18b"
+yellow = "#f5f543"
+blue = "#3b8eea"
+magenta = "#d670d6"
+cyan = "#29b8db"
+white = "#e5e5e5"
