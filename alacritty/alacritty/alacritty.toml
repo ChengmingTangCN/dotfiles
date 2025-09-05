@@ -1,12 +1,8 @@
 [window]
 dimensions = {columns = 120, lines = 85}
-
 padding = {x = 0, y = 0}
-
 decorations = "Full"
-
 opacity = 1.0
-
 startup_mode = "Windowed"
 
 [scrolling]
@@ -14,39 +10,36 @@ history = 25000
 
 [font]
 normal = { family = "source code pro", style = "Regular"}
-
 size = 12
 
+[keyboard]
+bindings = [
+{ key = "N", mods = "Control", action = "CreateNewWindow" }
+]
+
 # Copy from https://github.com/alacritty/alacritty-theme/tree/master
-# Colors (PaperColor - Dark)
 
-# Default colors
+# vscode theme
 [colors.primary]
-background = '#1c1c1c'
-foreground = '#808080'
+foreground = "#cccccc"
+background = "#1e1e1e"
 
-[colors.cursor]
-text = '#1c1c1c'
-cursor = '#808080'
-
-# Normal colors
 [colors.normal]
-black   = '#1c1c1c'
-red     = '#af005f'
-green   = '#5faf00'
-yellow  = '#d7af5f'
-blue    = '#5fafd7'
-magenta = '#808080'
-cyan    = '#d7875f'
-white   = '#d0d0d0'
+black = "#000000"
+red = "#cd3131"
+green = "#0dbc79"
+yellow = "#e5e510"
+blue = "#2472c8"
+magenta = "#bc3fbc"
+cyan = "#11a8cd"
+white = "#e5e5e5"
 
-# Bright colors
 [colors.bright]
-black   = '#585858'
-red     = '#5faf5f'
-green   = '#afd700'
-yellow  = '#af87d7'
-blue    = '#ffaf00'
-magenta = '#ffaf00'
-cyan    = '#00afaf'
-white   = '#5f8787'
+black = "#666666"
+red = "#f14c4c"
+green = "#23d18b"
+yellow = "#f5f543"
+blue = "#3b8eea"
+magenta = "#d670d6"
+cyan = "#29b8db"
+white = "#e5e5e5"
