@@ -12,6 +12,7 @@ colorscheme default
 set incsearch
 set ignorecase
 set smartcase
+set hlsearch
 
 " ---------------------- Editor settings  --------------
 set nocompatible                      " Incompatible with VI
