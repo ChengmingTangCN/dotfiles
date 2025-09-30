@@ -34,7 +34,7 @@ set undofile
 set undodir=~/.vim/.undo//
 set history=1000
 set list
-set listchars=trail:.,space:·
+set listchars=trail:·,space:·
 highlight SpecialKey ctermfg=238 guifg=#444444
 " Highlight the trailing whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -65,6 +65,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'embear/vim-localvimrc'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
