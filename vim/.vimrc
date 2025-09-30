@@ -6,7 +6,7 @@ set belloff=all
 
 set background=dark
 set t_Co=256
-colorscheme default
+colorscheme industry
 
 " ---------------------- Search  -----------------------
 set incsearch
@@ -52,7 +52,7 @@ set softtabstop=2     " Backspace
 set shiftwidth=2      " Shift width
 
 " ---------------------- Explorer ----------------------
-nnoremap <C-b> <ESC>:Lex<CR>:vertical resize 50<CR>
+ noremap <leader>ex <ESC>:Lex %:p:h<CR>:vertical resize 50<CR>
 
 " ---------------------- Plug --------------------------
 call plug#begin()
@@ -64,14 +64,28 @@ Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
+" ---------------------- vim-fugitive ------------------
+nnoremap <leader>gb :Git blame<CR>
+
 " ---------------------- fzf.vim -----------------------
-nnoremap <silent> <C-p> :Files<CR>
-nnoremap <Leader><Enter> :Buffers<CR>
-nnoremap <Leader>l :Lines<CR>
+
+" Enable per-command history
+" - History files will be stored in the specified directory
+" - When set, CTRL-N and CTRL-P will be bound to 'next-history' and
+"   'previous-history' instead of 'down' and 'up'.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " Allow passing optional flags into the Rg command.
 "   Example: :Rg myterm -g '*.md'
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+
+nnoremap <leader>sf :Files<CR>
+nnoremap <leader>sgf :GFiles<CR>
+nnoremap <leader>sbu :Buffers<CR>
+nnoremap <leader>sl :Lines<CR>
+nnoremap <leader>sbl :BLines<CR>
+nnoremap <leader>sr :Rg<CR>
+nnoremap <leader>sc :Commits<CR>
 
 " ---------------------- coc.nvim ----------------------
 " https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.vim
@@ -134,8 +148,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>fs  <Plug>(coc-format-selected)
+nmap <leader>fs  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -148,3 +162,4 @@ augroup end
 " Add `:Format` command to format current buffer
 command! -nargs=0 Format :call CocActionAsync('format')
 
+nmap <leader>ff :Format<CR>
