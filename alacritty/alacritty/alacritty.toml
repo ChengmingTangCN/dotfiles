@@ -14,7 +14,7 @@ size = 12
 
 [keyboard]
 bindings = [
-{ key = "N", mods = "Control", action = "CreateNewWindow" }
+{ key = "N", mods = "Control | Shift", action = "CreateNewWindow" }
 ]
 
 # Copy from https://github.com/alacritty/alacritty-theme/tree/master
