@@ -34,7 +34,8 @@ set undofile
 set undodir=~/.vim/.undo//
 set history=1000
 set list
-set listchars=trail:.
+set listchars=trail:.,space:·
+highlight SpecialKey ctermfg=238 guifg=#444444
 " Highlight the trailing whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace guibg=red
@@ -46,10 +47,12 @@ let mapleader = "\<space>"
 " ---------------------- Default Indentation -----------
 set autoindent
 set smartindent       " Indent when
-set tabstop=2         " Tab width
+set tabstop=4         " Tab width
 set expandtab         " Expand tab to space
-set softtabstop=2     " Backspace
-set shiftwidth=2      " Shift width
+set softtabstop=4     " Backspace
+set shiftwidth=4      " Shift width
+
+autocmd FileType make setlocal noexpandtab tabstop=4 softtabstop=0 shiftwidth=4
 
 " ---------------------- Explorer ----------------------
  noremap <leader>ex <ESC>:Lex %:p:h<CR>:vertical resize 50<CR>
@@ -61,6 +64,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'embear/vim-localvimrc'
 
 call plug#end()
 
