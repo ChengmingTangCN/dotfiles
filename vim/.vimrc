@@ -4,10 +4,6 @@ set encoding=utf-8
 
 set belloff=all
 
-set background=dark
-set t_Co=256
-colorscheme industry
-
 " ---------------------- Search  -----------------------
 set incsearch
 set ignorecase
@@ -60,6 +56,7 @@ autocmd FileType make setlocal noexpandtab tabstop=4 softtabstop=0 shiftwidth=4
 " ---------------------- Plug --------------------------
 call plug#begin()
 
+Plug 'tomasiser/vim-code-dark'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -68,6 +65,13 @@ Plug 'embear/vim-localvimrc'
 Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
+
+" ---------------------- vim-code-dark ------------------
+set background=dark
+set t_Co=256
+set t_ut=
+colorscheme codedark
+
 
 " ---------------------- vim-fugitive ------------------
 nnoremap <leader>gb :Git blame<CR>
