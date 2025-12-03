@@ -19,7 +19,7 @@ set number relativenumber
 set nowrap                            " Disable wrap
 set scrolloff=5
 set laststatus=2
-set statusline=[%f]%r%w%m%=%l/%L,%c\ %p%%
+set statusline=[%f]%r%w%m%=%l/%L,%v\ %p%%\ %{&fenc}\ %{&ft}
 set ruler
 set title
 set backspace=indent,eol,start
