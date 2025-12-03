@@ -14,7 +14,14 @@ size = 12
 
 [keyboard]
 bindings = [
-{ key = "N", mods = "Control | Shift", action = "CreateNewWindow" }
+{ key = "N", mods = "Control | Shift", action = "CreateNewWindow" },
+{ key = "Q", mods = "Control | Shift", action = "Quit" },
+{ key = "C", mods = "Control | Shift", action = "Copy" },
+{ key = "V", mods = "Control | Shift", action = "Paste" },
+{ key = "F11", action = "ToggleFullscreen" },
+{ key = "+", mods = "Control", action = "IncreaseFontSize" },
+{ key = "-", mods = "Control", action = "DecreaseFontSize" },
+{ key = "0", mods = "Control", action = "ResetFontSize" },
 ]
 
 # Copy from https://github.com/alacritty/alacritty-theme/tree/master
