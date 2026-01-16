@@ -61,7 +61,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'embear/vim-localvimrc'
 Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
