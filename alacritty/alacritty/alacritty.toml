@@ -5,6 +5,9 @@ decorations = "Full"
 opacity = 1.0
 startup_mode = "Windowed"
 
+[terminal]
+osc52 = "OnlyCopy"
+
 [scrolling]
 history = 25000
 
